@@ -3,7 +3,7 @@
 if [[ "$(uname)" = Linux ]]; then
     export CFLAGS="$CFLAGS -fopenmp"
     export CXXFLAGS="$CXXFLAGS -fopenmp"
-    yum install -q -y csh
+    # yum install -q -y csh
     CONFIGURE='../configure'
 
 else
@@ -18,4 +18,4 @@ cp autodock4 ${PREFIX}/bin
 pushd ${SRC_DIR}/autogrid/build
 $CONFIGURE
 make
-cp autogrid4  ${PREFIX}/bin
+cp autogrid4 ${PREFIX}/bin
