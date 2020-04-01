@@ -1,5 +1,6 @@
 {% set name = "autodock" %}
 {% set version = "4.2.6" %}
+{% set sha256 = "4b24ce4baf216a5e1a6a79bb664eeed684aed17cede64ff0061aa1bcc17874c4" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,12 +8,13 @@ package:
 
 source:
   url: http://autodock.scripps.edu/downloads/autodock-registration/tars/dist{{ version|replace(".","") }}/autodocksuite-{{ version }}-src.tar.gz
-  sha256: 4b24ce4baf216a5e1a6a79bb664eeed684aed17cede64ff0061aa1bcc17874c4
+  sha256: {{ sha256 }}
   patches:
-    - osx.patch # [osx]
+    - osx.patch  # [osx]
 
 build:
   number: 0
+  skip: True  # [win]
 
 requirements:
   build:
@@ -28,5 +30,5 @@ about:
   home: http://autodock.scripps.edu
   license: GPLv2
   license_family: GPL
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
+  license_file: LICENSE
   summary: "AutoDock is a suite of automated docking tools. It is designed to predict how small molecules, such as substrates or drug candidates, bind to a receptor of known 3D structure."
