@@ -10,10 +10,12 @@ source:
   url: http://autodock.scripps.edu/downloads/autodock-registration/tars/dist{{ version|replace(".","") }}/autodocksuite-{{ version }}-src.tar.gz
   sha256: {{ sha256 }}
   patches:
+    - autocomm.h.patch
+    - constants.h.patch
     - osx.patch  # [osx]
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win or osx]
 
 requirements:
@@ -23,8 +25,10 @@ requirements:
 
 test:
   commands:
-    - autodock4 --version
-    - autogrid4 --version
+    - ulimit -a
+    - ulimit -s unlimited && autodock4 --version
+    - ulimit -s unlimited && autogrid4 --version
+    - gen_tor_arg_list.sh  # [not win]
 
 about:
   home: http://autodock.scripps.edu
