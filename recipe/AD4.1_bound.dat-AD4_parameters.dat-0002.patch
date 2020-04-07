@@ -1,5 +1,5 @@
 diff --git a/autodock/AD4.1_bound.dat b/autodock/AD4.1_bound.dat
-index 553c0a6..a278072 100644
+index 553c0a6..8134e98 100644
 --- a/autodock/AD4.1_bound.dat
 +++ b/autodock/AD4.1_bound.dat
 @@ -87,6 +87,7 @@ atom_par K      3.81  0.035  12.000   -0.00110  0.0  0.0  0  -1  -1  1 # Non H-b
@@ -11,7 +11,7 @@ index 553c0a6..a278072 100644
  atom_par Ni     2.83  0.015  12.000   -0.00110  0.0  0.0  0  -1  -1  1 # Non H-bonding
  atom_par Cu     3.50  0.005  12.000   -0.00110  0.0  0.0  0  -1  -1  1 # Non H-bonding
 diff --git a/autodock/AD4_parameters.dat b/autodock/AD4_parameters.dat
-index 553c0a6..a278072 100644
+index 553c0a6..8134e98 100644
 --- a/autodock/AD4_parameters.dat
 +++ b/autodock/AD4_parameters.dat
 @@ -87,6 +87,7 @@ atom_par K      3.81  0.035  12.000   -0.00110  0.0  0.0  0  -1  -1  1 # Non H-b
